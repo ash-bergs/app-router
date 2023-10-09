@@ -10,9 +10,11 @@ const apiURL = 'https://jsonplaceholder.typicode.com/posts';
 const PostId: FC<PageProps> = async ({ params }) => {
   // Next has modified to regular fetch
   // Allowing us to specify the cache behavior
-  // Building the app now (with this val) will show this page as a dynamic route (lambda)
+  // And decide Next rendering strategy
   const res = await fetch(apiURL, {
-    cache: 'no-store', // defaults to force-cache
+    next: {
+      revalidate: 10, // revalidate every 10 seconds
+    },
   });
 
   const data = await res.json();

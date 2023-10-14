@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import axios from 'axios';
+import type { Metadata } from 'next';
 
 // Use Next dynamic to opt in or out of dynamic behavior
 // Result is never cached
@@ -25,6 +26,11 @@ interface PageProps {
   params: { postId: string };
   searchParams: URLSearchParams;
 }
+
+export const metadata: Metadata = {
+  title: 'Alt Page',
+  description: 'This title applies to alt/[altPostId]/page.tsx',
+};
 
 const apiURL = 'https://jsonplaceholder.typicode.com/posts';
 

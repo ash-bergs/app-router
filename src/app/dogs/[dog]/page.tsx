@@ -2,7 +2,7 @@
 import Head from 'next/head';
 import React, { useEffect, useState, Suspense } from 'react';
 import axios from 'axios';
-const LazyImage = React.lazy(() => import('@/LazyImage'));
+const LazyImage = React.lazy(() => import('@/components/LazyImage'));
 
 const Spinner = () => (
   <div className="text-black">

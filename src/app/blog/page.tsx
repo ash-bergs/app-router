@@ -1,5 +1,16 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+
+// Use Next dynamic to opt in or out of dynamic behavior
+// Result is never cached
+// export const dynamic = "force-dynamic"
+
+// Use revalidate to specify revalidation interval
+// page will be statically generated
+// export const revalidate = 10;
+
+// statically generate at build time
+// page will now be SSG at buld
 interface PageProps {
   params: { postId: string };
   searchParams: URLSearchParams;

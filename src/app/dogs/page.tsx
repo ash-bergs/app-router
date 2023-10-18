@@ -18,6 +18,7 @@ export async function generateStaticParams() {
   }));
 }
 
+//https://dog.ceo/api/breeds/list/all
 const apiURL = 'https://dog.ceo/api/breed/hound/list';
 
 const DogsPage = async () => {

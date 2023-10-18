@@ -42,11 +42,6 @@ const DogPage = ({ params }: PageProps) => {
 
   return (
     <>
-      <Head>
-        <title>{pageTitle}</title>
-
-        {/* For social sharing, SEO, and more */}
-      </Head>
       <div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12 text-black">
         <div className="relative py-3 sm:max-w-xl sm:mx-auto">
           <h1 className="text-4xl font-bold mb-4 text-center">{params.dog}</h1>

@@ -16,14 +16,13 @@ type PageProps = {
   };
 };
 
+const dogs = ['basset', 'hound'];
+const apiURL = `https://dog.ceo/api/breed/hound/`;
+
 const DogPage = ({ params }: PageProps) => {
   const apiURL = `https://dog.ceo/api/breed/hound/${params.dog}/images/random`;
   const [dogImg, setDogImg] = useState('');
-  const pageTitle = `${
-    params.dog.charAt(0).toUpperCase() + params.dog.slice(1)
-  } Hound`; // Capitalize the first letter
 
-  console.log('params', pageTitle);
   const fetchDogImage = async () => {
     try {
       const {

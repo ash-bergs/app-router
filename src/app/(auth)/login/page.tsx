@@ -2,7 +2,7 @@
 // Meaning it won't show up in the route path
 // Useful for organization
 import { AuthRequiredError } from '@/lib/exceptions';
-const session = 'Session';
+const session = null;
 // server components can be async
 // this is useful for fetching data from an api
 // we can use `await` at the top level of the component

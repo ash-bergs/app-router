@@ -33,6 +33,7 @@ const PostId = async ({ params }: PageProps) => {
   const res = await fetch(
     `https://jsonplaceholder.typicode.com/posts/${params.postId}`,
     {
+      cache: 'default',
       next: {
         revalidate: 10, // revalidate every 10 seconds
       },
